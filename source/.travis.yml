@@ -1,0 +1,31 @@
+language: python
+python: 3.6
+
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+
+stages:
+  - deploy
+
+install:
+  - pip install -r requirements.txt
+
+jobs:
+  include:
+    - stage: deploy
+      python: 3.6
+      script:
+        # make html
+        - make html
+
+      name: "Build docs"
+
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: true
+        on:
+          branch: master
+        local_dir: _build/html
