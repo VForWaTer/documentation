@@ -16,5 +16,6 @@ You will find several guides below.
    getting_started/getting_started
    filter_ref/filter
    tool_ref/index
+   administration/administration
    developer/install
    developer/contribute
