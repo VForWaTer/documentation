@@ -17,7 +17,10 @@ Introduction
 What is V-FOR-WaTer?
 --------------------
 
-V-FOR-WaTer 
+V-FOR-WaTer will enable access to data and processes within one portal, with data provided from users and established data portals.
+Yet the portal is still under construction and shows only time series data.
+In production we will also over vector and raster data,
+and the corresponding procces to work with data of different types.
 
 Why should I use V-FOR-WaTer?
 -----------------------------
