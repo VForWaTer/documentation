@@ -25,12 +25,14 @@ and the corresponding procces to work with data of different types.
 Why should I use V-FOR-WaTer?
 -----------------------------
 
-Because it't awesome!
+1. Because it's awesome!
+2. Processing your data in the V-FOR-WaTer portal is simple, fast and reproducible.
 
 What does it cost?
 ------------------
 
-It's free!
+It's free! Except of some Processes that need high performance computing.
+The cost model for such processes will be announced later.
 
 How does a typical workflow look like?
 --------------------------------------
