@@ -16,7 +16,7 @@ pages.
    :caption: Contents:
    :hidden:
 
-   getting_started/getting_started
+   about/index
    userguide/index
    metadata/index
    tool_ref/index

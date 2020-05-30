@@ -1,18 +1,17 @@
-===============
-Getting started
-===============
+===========
+V-FOR-WaTer
+===========
 
 Introduction
 ============
 
 .. note::
 
-    The Getting Started guide will quickly introduce the main features
-    of the V-FOR-WaTer application and guide you through an easy example.
+    This section gives a quick overview of the 
+    `V-FOR-WaTer Project <https://vforwater.de>`_ and the main functions of the 
+    platform developed in the project
 
-.. warning::
 
-    This section is under construction.
 
 What is V-FOR-WaTer?
 --------------------
@@ -85,12 +84,14 @@ Visualization
 .. todo::
 
     Propose text here
+
 Download
 ========
 
 .. todo::
 
     Propose text here
+
 How to cite
 ===========
 
