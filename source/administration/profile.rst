@@ -5,6 +5,6 @@ User Profile Management
 General
 =======
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Define the sections here

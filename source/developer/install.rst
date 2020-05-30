@@ -5,6 +5,6 @@ Installation Guide
 General
 =======
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Define the sub-sections here

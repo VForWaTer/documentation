@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'V-FOR-WaTer documentation'
-copyright = '2019, Mälicke, Strobl, Azmi, Hassler, Meyer'
+copyright = '2020, Mälicke, Strobl, Azmi, Hassler, Meyer'
 author = 'Mälicke, Strobl, Azmi, Hassler, Meyer'
 
 # The full version, including alpha/beta/rc tags
@@ -32,7 +32,9 @@ release = '0.1'
 # ones.
 extensions = [
     'sphinx.ext.githubpages',
-    'sphinx.ext.napoleon'
+    'sphinx.ext.napoleon',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.todo'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -49,30 +51,33 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'pydata_sphinx_theme'
+html_logo = '_static/brand.png'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 html_theme_options = {
-    'show_related': True,
-    'sidebar_collapse': True,
-    'body_text_align': 'justify',
+#    'show_related': True,
+#    'sidebar_collapse': True
+    'github_url': 'https://github.com/VForWaTer/documentation'
 }
 
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-        'donate.html'
-    ]
+html_context = {
+    'github_user': 'VForWaTer',
+    'github_repo': 'documentation',
+    'github_version': 'master',
+    'doc_path': '.'
 }
+
+html_short_title = 'V-FOR-WaTer Docs'
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# todo settings
+todo_include_todos = True

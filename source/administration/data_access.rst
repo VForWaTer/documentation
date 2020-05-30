@@ -5,6 +5,6 @@ Access Right Management
 General
 =======
 
-.. warning::
+.. todo::
 
-    THis section is under construction.
+    Define the sections here

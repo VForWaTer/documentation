@@ -17,7 +17,12 @@ Introduction
 What is V-FOR-WaTer?
 --------------------
 
-V-FOR-WaTer will enable access to data and processes within one portal, with data provided from users and established data portals.
+.. todo::
+
+    Review this section
+
+V-FOR-WaTer will enable access to data and processes within one portal, 
+with data provided from users and established data portals.
 Yet the portal is still under construction and shows only time series data.
 In production we will also over vector and raster data,
 and the corresponding procces to work with data of different types.
@@ -25,17 +30,29 @@ and the corresponding procces to work with data of different types.
 Why should I use V-FOR-WaTer?
 -----------------------------
 
+.. todo::
+
+    Review
+
 1. Because it's awesome!
 2. Processing your data in the V-FOR-WaTer portal is simple, fast and reproducible.
 
 What does it cost?
 ------------------
 
+.. todo::
+
+    Review
+
 It's free! Except of some Processes that need high performance computing.
 The cost model for such processes will be announced later.
 
 How does a typical workflow look like?
 --------------------------------------
+
+.. todo::
+
+    Review
 
 Usually you will follow a find-manipulate-visualize-download workflow.
 
@@ -50,35 +67,33 @@ Usually you will follow a find-manipulate-visualize-download workflow.
 Finding a dataset
 =================
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Propose text here
 
 
 Running some tools
 ==================
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Propose text here
 
 Visualization
 =============
 
-.. warning::
+.. todo::
 
-    This section is under construction.
-
+    Propose text here
 Download
 ========
 
-.. warning::
+.. todo::
 
-    This section is under construction.
-
+    Propose text here
 How to cite
 ===========
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Propose text here

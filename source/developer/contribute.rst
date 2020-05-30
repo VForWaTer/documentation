@@ -2,9 +2,9 @@
 Contribution Guide
 ==================
 
-General
-=======
+Overview
+======== 
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Define the section here

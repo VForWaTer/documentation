@@ -5,17 +5,25 @@ V-FOR-WaTer Documentation
 Overview
 ========
 
-This documentation collects all needed documents concerning the 
-`V-FOR-WaTer project <https://portal.vforwater.de>`_.
-You will find several guides below.
+This is the `V-FOR-WaTer project <https://vforwater.de>`_ documentation.
+The Project consists of several standalone sub-projects and their major 
+application in the  `V-FOR-WaTer Portal <https://portal.vforwater.de>`_. 
+The documentation of the respective sub-projects can be found on the project 
+pages.
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
+   :hidden:
 
    getting_started/getting_started
-   filter_ref/filter
+   userguide/index
+   metadata/index
    tool_ref/index
-   administration/administration
-   developer/install
-   developer/contribute
+   administration/index
+   developer/index
+
+
+.. todo::
+
+   Describe how the docs work and where the user can find what kind of information.

@@ -2,9 +2,10 @@
 Administration
 ==============
 
-.. warning::
+.. todo::
 
-    This section is under construction.
+    Add missing sub-pages and include them in table of contents below
+
     
 
 .. toctree::
