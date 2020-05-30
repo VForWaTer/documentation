@@ -19,7 +19,7 @@ jobs:
       run: sudo apt-get install pandoc
     
     - name: Install Python
-      uses: actions/setup-python@2
+      uses: actions/setup-python@v2
       with:
         python-version: 3.7
         
