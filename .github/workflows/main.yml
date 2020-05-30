@@ -1,0 +1,39 @@
+name: Publish to gh-pages
+
+# Run on every commit
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  sphinx-build:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install pandoc
+      run: sudo apt-get install pandoc
+    
+    - name: Install Python
+      uses: actions/setup-python@2
+      with:
+        python-version: 3.7
+        
+    - name: Install Dependencies
+      run: | 
+        pip install -r requirements.txt
+    
+    # HERE: if we want to build pdf, this should go here...
+    - name: Build docs
+      run: make html
+      
+    - name: Deploy
+      uses: crazy-max/ghaction-github-pages@v2.0.1
+      with:
+        build_dir: build/html
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
