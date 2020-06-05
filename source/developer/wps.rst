@@ -68,7 +68,7 @@ Data Types
     - multiple arrays, indexed by a ``DatetimeIndex``. All ``pd.DataFrame.columns`` have to be of same V-ForWater variable
   * - raster
     - ``gtiff``, ``.geotiff``, ``.asc``
-    - `rasterio.open() `<https://rasterio.readthedocs.io/en/latest/api/rasterio.html?highlight=rasterio.open#rasterio.open>`_
+    - `rasterio.open() <https://rasterio.readthedocs.io/en/latest/api/rasterio.html?highlight=rasterio.open#rasterio.open>`_
     - Georeferenced raster image. Any file format supported by GDAL is supported by ``rasterio`` and therefore also here.
   * - vraster
     - ?
