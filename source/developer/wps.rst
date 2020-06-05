@@ -19,7 +19,7 @@ Data Types
   :header-rows: 1
   
   * - type name
-    - file type (MIME, name)
+    - file type
     - reader function
     - description
   * - array
@@ -28,12 +28,20 @@ Data Types
     - 1D array, without any index information
   * - iarray
     - ``.csv``
-    - `pandas.read_csv().iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
-    - 1D array, index by any kind of pandas supported index, except ``DatetimeIndex``
+    - `pandas.read_csv(... index_col=[0]).iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+    - 1D array, indexed by any kind of pandas supported index, except ``DatetimeIndex``.
+  * - varray
+    - ``.csv``
+    - `pandas.read_csv(... index_col=[0]).iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+    - 1D array, indexed by any kind of pandas supported index, except ``DatetimeIndex``. The ``pd.Series.name`` is a valid V-FOR-WaTer variable, e.g. the index may be a depth and the variable name ``'bulk density'``  
   * - timeseries
     - ``.csv``
-    - `pandas.read_csv().iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
-    - 1D array, index by a ``DatetimeIndex``
+    - `pandas.read_csv(... index_col=[0]).iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+    - 1D array, indexed by a ``DatetimeIndex``
+  * - vtimeseries
+    - ``.csv``
+    - `pandas.read_csv(... index_col=[0]).iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+    - 1D array, indexed by a ``DatetimeIndex``. The ``pd.Series.name`` is a valid V-FOR-WaTer variable, e.g. ``'discharge'``
     
 Hierachical Order
 =================
@@ -42,4 +50,8 @@ Hierachical Order
 
   array
     - iarray
+      - varray
     - timeseries
+      - vtimeseries
+
+The hierachy is *upward* compatible. That means a named variable ``vtimeseries`` is also a ``timeseries`` and an ``array``, but not a `varray`. A tool might still accept ``varray`` **and** ``vtimeseries``.
