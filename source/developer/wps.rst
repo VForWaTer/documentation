@@ -15,7 +15,7 @@ Data Types
 ==========
 
 .. list-table:: Overview
-  :widths: 20 20 20 40
+  :widths: 20 20 30 30
   :header-rows: 1
   
   * - type name
