@@ -1,6 +1,6 @@
-===========
-V-FOR-WaTer
-===========
+=====
+About
+=====
 
 Introduction
 ============
@@ -63,30 +63,8 @@ Usually you will follow a find-manipulate-visualize-download workflow.
    the V-FOR-WaTer toolbox will be available, as well!
 5. **Publish** your research done based on the downloaded dataset and don't forget to cite the dataset and V-FOR-WaTer ;)
 
-Finding a dataset
-=================
-
-.. todo::
-
-    Propose text here
-
-
-Running some tools
-==================
-
-.. todo::
-
-    Propose text here
-
-Visualization
-=============
-
-.. todo::
-
-    Propose text here
-
-Download
-========
+How to contribute data
+======================
 
 .. todo::
 

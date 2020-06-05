@@ -18,8 +18,7 @@ pages.
 
    about/index
    userguide/index
-   metadata/index
-   tool_ref/index
+   toolbox/index
    administration/index
    developer/index
 
