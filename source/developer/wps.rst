@@ -14,6 +14,32 @@ can handle any type of timeseries data, while other will expect a timeseries of 
 Data Types
 ==========
 
-.. todo::
+.. list-table:: Overview
+  :widths: 20 20 20 40
+  :header-rows: 1
+  
+  * - type name
+    - file type (MIME, name)
+    - reader function
+    - description
+  * - array
+    - ``.npy``, ``.npz``
+    - `numpy.load <https://numpy.org/doc/1.18/reference/generated/numpy.load.html>`_
+    - 1D array, without any index information
+  * - iarray
+    - ``.csv``
+    - `pandas.read_csv().iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+    - 1D array, index by any kind of pandas supported index, except ``DatetimeIndex``
+  * - timeseries
+    - ``.csv``
+    - `pandas.read_csv().iloc[:,0] <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+    - 1D array, index by a ``DatetimeIndex``
+    
+Hierachical Order
+=================
 
-  Add them here, once discussed.
+.. code-block:: 
+
+  array
+    - iarray
+    - timeseries
