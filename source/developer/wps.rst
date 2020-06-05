@@ -50,7 +50,7 @@ Data Types
     - ``.npy``, ``.npz``
     - `numpy.load <https://numpy.org/doc/1.18/reference/generated/numpy.load.html>`_
     - N-dimensional array, without any index information
-  * * - idataframe
+  * - idataframe
     - ``.csv``
     - `pandas.read_csv(... index_col=[0]) <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
     - multiple arrays, indexed by any kind of pandas supported index, except ``DatetimeIndex``.
