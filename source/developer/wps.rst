@@ -107,10 +107,33 @@ Hierachical Order
 
 The hierachy is *downward* compatible. That means a named variable ``vtimeseries`` is also a valid ``timeseries`` and an ``array``, but not a `varray`. It is possbile that tools might accept data types from different branches. A tool that accepts ``array`` **and** ``ndarray`` will literally take *any* input.
 
-File Structure
-==============
+Defining Data-Types
+===================
 
-A WPS Process will write at least two files for each output. One file is the data, using the data type as specified above (plot will have two outputs here). The other file is a JSON file containing metadata. All files of one output will use the same file name and only differ in file ending. The file name is a `UUID version 4 <https://de.wikipedia.org/wiki/Universally_Unique_Identifier#(Pseudo)zuf%C3%A4llig_generierte_UUIDs_(Version_4)>`_. 
+The definition of input and output data is done using a ``LiteralInput`` and ``LiteralOutput`` of type ``string``. 
+The actual data is stored in temporary files as specified in the table above. 
+All files of one output/input will use the same file name and only differ in file ending. The file name is a `UUID version 4 <https://de.wikipedia.org/wiki/Universally_Unique_Identifier#(Pseudo)zuf%C3%A4llig_generierte_UUIDs_(Version_4)>`_. 
+They will always consist of at least two files, one for the data and a metadata file of type ``.json``
+
+WPS Input
+---------
+
+If a tool needs any of the file-based data types from above, the WPS process just needs to define an input of type string and awaits the UUID of 
+the given data source.
+
+.. code-block:: python
+
+  class MyTool(Process):
+    def __init__(self):
+      inputs = [
+        LiteralInput(
+          'timeseries',
+          'UUID of the timeseries to be used',
+          data_type='string',
+          min_occurence=2,
+          max_occurence=5
+        )
+      ]
 
 WPS Output
 ----------
@@ -133,17 +156,53 @@ The error-object will also be returned, if there is no error. Then, the ``error[
 * userWarning - mainly due to wrong options passed. 
 * processError - expected errors that are specific to the tool. These errors need to be reported to the user. 
 
-An example of a processError would be a ``numpyLinAlgError`` that is raised during Kriging, if the kriging matrix is bad conditioned. This is an expected error that should be 
-reported to the user, as it could indicate that the Kriging results are incorrect. These kind of errors cannot be handled in the Toolbox.
+An example of a processError would be a ``numpy.LinAlgError`` that is raised during Kriging, if the kriging matrix is bad conditioned. 
+This is an expected error that should be reported to the user, as it could indicate that the Kriging results are incorrect. 
+These kind of errors cannot be handled in the Toolbox.
 
 Metadata file
 -------------
 
-Each tool will also write a metadata file in ``.json`` format. This metadata file contains metadata about the initial datasets, that might be required by some tools and a collection of all tools that already were applied. That means, for a specific tool, the corresponding ``.json`` will conain the UUIDs of other tool runs. This way a toolchain can be traced. If you re-run a tool, new ``.json`` will be written.
+Each tool will also write a metadata file in ``.json`` format. This metadata file contains 
+metadata about the initial datasets, that might be required by some tools and a collection of all tools that already were applied. 
+That means, for a specific tool, the corresponding ``.json`` will conain the UUIDs of other tool runs. 
+This way a toolchain can be traced. If you re-run a tool, new ``.json`` will be written.
+
+The ``.json`` file will contain all information about the tool processed. This includes metadata like the tool name and the 
+inputs given, but also parameters like the processing time. For any input, that was the result of another tool, the UUID is 
+given anyway and a toolchain can be reconstructed. 
+If a tool loaded data into the workspace, either by loading it from the database or by producing mdelling output, the 
+necessary metadata will be contained in a special key ``'meta'`` or ``'entry_id'`` of the file. 
+This way, if a tool needs the geolocation of a dataset, but is the not the first tool in line, it can reconstruct the 
+toolchain until any of the other ``.json`` contains a special key.
+``'meta'`` is expected to have the same structure as the metadata in the V-FOR-WaTer database, while ``'entry_id'`` can 
+be used to query the needed information and is thus the preferred way.
+
+A description of the ``.json`` is shown below:
+
+.. code-block:: json
+
+  {
+    "identifier": "Identifier of the WPS process",
+    "title": "Title of the WPS process", 
+    "version": "Version of the WPS process",
+    "inputs": [
+      {
+        "uuid": "UUID if the input was a tool output | optional",
+        "entry_id": "ID in the database if data was loaded | optional",
+        "meta" : {} # the metadata itself if the two others are not applicable
+      }
+    ],
+    "args": {}, # any other LiteralInput, that is not in inputs
+    "startUTC": "UTC timestamp when process tool was started",
+    "endUTC": "UTC timestamp when process tool ended",
+    "error": {} # error object as described above
+  }
+
 
 .. todo::
 
-  document the structure and give an example
+  fill the exapmple above
 
 Example
 -------
