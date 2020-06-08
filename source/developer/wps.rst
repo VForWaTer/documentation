@@ -6,9 +6,9 @@ Overview
 ========
 
 The Tools in V-FOR-WaTer are implemented as a standalone server. It uses the `WPS Protocol <https://de.wikipedia.org/wiki/Web_Processing_Service>`_ to receive
-inputs, data and configuration and returns processing output. Most data, including input data from the database, but also processing results and intermediate results
+inputs, data and configuration and returns processing output. Most data, including input data from the database, but also processing results and intermediate results,
 are saved to a temporary folder on the processing server. The WPS just exchanges configuration and file-locations. For this to work, a set of *data types* are defined.
-Each tool can only handle a specific, or a set of specified data types and has defined outputs. These data-types are hierachical. That means there are tools that
+Each tool can only handle one specific data type, or a set of specified data types, and has defined outputs. These data types are hierachical. That means there are tools that
 can handle any type of timeseries data, while other will expect a timeseries of discharge data.
 
 Data Types
@@ -107,7 +107,7 @@ Hierachical Order
 
 The hierachy is *downward* compatible. That means a named variable ``vtimeseries`` is also a valid ``timeseries`` and an ``array``, but not a `varray`. It is possbile that tools might accept data types from different branches. A tool that accepts ``array`` **and** ``ndarray`` will literally take *any* input.
 
-Defining Data-Types
+Defining data types
 ===================
 
 The definition of input and output data is done using a ``LiteralInput`` and ``LiteralOutput`` of type ``string``.
@@ -175,7 +175,7 @@ The definition of inputs follows ``LiteralInput(identifier, title=None, data_typ
 
 The definition of the file-based data types is supposed to be done in ``Keywords``, when they are implemented in ``pywps`` and ``owslib``.
 
-The example above results in a dropdown that shows ``'UUID of the timeseries to be used'`` when the user hovers over the element. The user can select two to five timeseries data-sets from the dropdown (``min_occurence=2`` forces a ``*required`` flag to the input field, and ``max_occurence=5`` forces a multiple select option).
+The example above results in a dropdown that shows ``'UUID of the timeseries to be used'`` when the user hovers over the element. The user can select two to five timeseries datasets from the dropdown (``min_occurence=2`` forces a ``*required`` flag to the input field, and ``max_occurence=5`` forces a multiple select option).
 
 More information how to describe the inputs of a wps in general is given in the `pywps documentation <https://pywps.readthedocs.io/en/stable/api.html>`_.
 
@@ -196,7 +196,7 @@ An additional output called ``'error'`` is appended to each WPS Process. It cont
 
 The error-object will also be returned, if there is no error. Then, the ``error['error']==False``. The error type can be one of:
 
-* bug - unexpected Exceptions that are not handled in the Toolbox. These should be reported to the developer
+* bug - unexpected exceptions that are not handled in the Toolbox. These should be reported to the developer.
 * userWarning - mainly due to wrong options passed.
 * processError - expected errors that are specific to the tool. These errors need to be reported to the user.
 
@@ -208,12 +208,12 @@ Metadata file
 -------------
 
 Each tool will also write a metadata file in ``.json`` format. This metadata file contains
-metadata about the initial datasets, that might be required by some tools and a collection of all tools that already were applied.
+metadata about the initial datasets that might be required by some tools, and a collection of all tools that were already applied.
 That means, for a specific tool, the corresponding ``.json`` will conain the UUIDs of other tool runs.
-This way a toolchain can be traced. If you re-run a tool, new ``.json`` will be written.
+In this way, a toolchain can be traced. If you re-run a tool, a new ``.json`` will be written.
 
-The ``.json`` file will contain all information about the tool processed. This includes metadata like the tool name and the
-inputs given, but also parameters like the processing time. For any input, that was the result of another tool, the UUID is
+The ``.json`` file will contain all information about the processed tool. This includes metadata like the tool name and the
+given inputs, but also parameters like the processing time. For any input which was the result of another tool, the UUID is
 given anyway and a toolchain can be reconstructed.
 If a tool loaded data into the workspace, either by loading it from the database or by producing mdelling output, the
 necessary metadata will be contained in a special key ``'meta'`` or ``'entry_id'`` of the file.
@@ -285,4 +285,5 @@ On the drive, you will find the following files:
 
 .. note::
 
-  At this point the two json files essentially contain the same information, but as the ``vtimeseries`` might be further processed.
+  At this point the two ``.json`` files essentially contain the same information, but as the ``vtimeseries`` might be further processed.
+
