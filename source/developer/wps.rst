@@ -142,13 +142,39 @@ The definition of inputs follows ``LiteralInput(identifier, title=None, data_typ
 * data_type - General data type of input. **Standard input is a textfield**. Adaptations for special cases are in preparation. E.g. ``string`` exposes a textfield; ``string`` **in combination with a specific datatype defined in the identifier exposes a dropdown menu**. Allowed are the basic data types ``'float', 'boolean', 'integer', 'string', 'positiveInteger', 'anyURI', 'time', 'date', 'dateTime', 'scale', 'angle', 'nonNegativeInteger'``.
 * abstract - Information for the user about the data.
 * uoms - units (not used yet)
-* min_occurs - minimum occurrence of the input. ``min_occurs > 0`` **defines a required input**.
-* max_occurs - maximum occurrence of the input. ``min_occurs > 1`` **defines a list**.
+* min_occurs - minimum occurrence of the input. ``default = 1``
+* max_occurs - maximum occurrence of the input. ``default = 1``
+
+.. list-table:: Use of min_occurs and max_occurs to define input types in web portal
+  :widths: 15 15 35 25
+  :header-rows: 1
+
+  * - min_occurs
+    - max_occurs
+    - implication for wps input
+    - element
+  * - >0
+    - 1
+    - single value & required
+    - dropdown
+  * - 0
+    - 1
+    - single value & **not** required
+    - dropdown
+  * - 0
+    - >1
+    - list of one or more values & **not** required
+    - multi select dropdown
+  * - >0
+    - >1
+    - list of one or more values & required
+    - multi select dropdown
+
 * allowed_values - defined values exposed to the user as **radio buttons**.
 * default - value used when the user selects nothing for this input.
 
 The definition of the file-based data types is supposed to be done in ``Keywords``, when they are implemented in ``pywps`` and ``owslib``.
-From the example above, ``min_occurence=2`` forces a multiple select option for the portal user.
+From the example above, ``min_occurence=2`` forces a ``*required`` flag to the input field, and ``max_occurence=5`` forces a multiple select option for the portal user.
 More information how to describe the inputs of a wps in general is given in the `pywps documentation <https://pywps.readthedocs.io/en/stable/api.html>`_.
 
 WPS Output
