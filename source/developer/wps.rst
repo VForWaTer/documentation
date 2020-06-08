@@ -153,7 +153,7 @@ The definition of inputs follows ``LiteralInput(identifier, title=None, data_typ
     - max_occurs
     - implication for wps input
     - element
-  * - ``>0``
+  * - ``1``
     - ``1``
     - single value & required ``default``
     - dropdown
