@@ -153,28 +153,30 @@ The definition of inputs follows ``LiteralInput(identifier, title=None, data_typ
     - max_occurs
     - implication for wps input
     - element
-  * - >0
-    - 1
-    - single value & required
+  * - ``>0``
+    - ``1``
+    - single value & required ``default``
     - dropdown
-  * - 0
-    - 1
+  * - ``0``
+    - ``1``
     - single value & **not** required
     - dropdown
-  * - 0
-    - >1
-    - list of one or more values & **not** required
+  * - ``0``
+    - ``>1``
+    - one or more values & **not** required
     - multi select dropdown
-  * - >0
-    - >1
-    - list of one or more values & required
+  * - ``>0``
+    - ``>1``
+    - one or more values & required
     - multi select dropdown
 
 * allowed_values - defined values exposed to the user as **radio buttons**.
 * default - value used when the user selects nothing for this input.
 
 The definition of the file-based data types is supposed to be done in ``Keywords``, when they are implemented in ``pywps`` and ``owslib``.
-From the example above, ``min_occurence=2`` forces a ``*required`` flag to the input field, and ``max_occurence=5`` forces a multiple select option for the portal user.
+
+The example above results in a dropdown that shows ``'UUID of the timeseries to be used'`` when the user hovers over the element. The user can select two to five timeseries data-sets from the dropdown (``min_occurence=2`` forces a ``*required`` flag to the input field, and ``max_occurence=5`` forces a multiple select option).
+
 More information how to describe the inputs of a wps in general is given in the `pywps documentation <https://pywps.readthedocs.io/en/stable/api.html>`_.
 
 WPS Output
