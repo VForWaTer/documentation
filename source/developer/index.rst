@@ -12,4 +12,5 @@ Developer Guide
 
     install 
     standalone
+    wps
     contribute
