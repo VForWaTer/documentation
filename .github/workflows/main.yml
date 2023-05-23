@@ -1,15 +1,11 @@
 name: Publish to gh-pages
 
 # Run on every commit
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: push
 
 jobs:
   sphinx-build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
     - name: Checkout Repository
@@ -21,7 +17,7 @@ jobs:
     - name: Install Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: 3.9
         
     - name: Install Dependencies
       run: | 
