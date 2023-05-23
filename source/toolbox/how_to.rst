@@ -9,7 +9,7 @@ A list of available toolsets is available at `https://github.com/VForWaTer/curat
 
 Collect information about tool parameters (using the example of tbr_skgstat)
 ===========
-When you're lucky you can find a documentation (e.g. 'https://mmaelicke.github.io/scikit-gstat/reference/variogram.html#skgstat.Variogram <https://mmaelicke.github.io/scikit-gstat/reference/variogram.html#skgstat.Variogram>'_).
+When you're lucky you can find a documentation (e.g. `https://mmaelicke.github.io/scikit-gstat/reference/variogram.html#skgstat.Variogram <https://mmaelicke.github.io/scikit-gstat/reference/variogram.html#skgstat.Variogram>`_).
 If not, you have to get information directly from the code (and hope for inline documentation).
 
 **Important:** Compare the needs of the tool with the definitions from the container (see below). 
