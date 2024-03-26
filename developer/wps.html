@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>WPS Toolbox &#8212; V-FOR-WaTer documentation 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'developer/wps';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contribution Guide" href="contribute.html" />
+    <link rel="prev" title="Standalone Sub-Projects" href="standalone.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/brand.png" class="logo__image only-light" alt="V-FOR-WaTer documentation 0.1 documentation - Home"/>
+    <script>document.write(`<img src="../_static/brand.png" class="logo__image only-dark" alt="V-FOR-WaTer documentation 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/index.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../userguide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../toolbox/index.html">
+                        Toolbox
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../administration/index.html">
+                        Administration
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Developer Guide
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/VForWaTer/documentation" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/index.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../userguide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../toolbox/index.html">
+                        Toolbox
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../administration/index.html">
+                        Administration
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Developer Guide
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/VForWaTer/documentation" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standalone.html">Standalone Sub-Projects</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">WPS Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribution Guide</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Developer Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">WPS Toolbox</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="wps-toolbox">
+<h1>WPS Toolbox<a class="headerlink" href="#wps-toolbox" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The Tools in V-FOR-WaTer are implemented as a standalone server. It uses the <a class="reference external" href="https://de.wikipedia.org/wiki/Web_Processing_Service">WPS Protocol</a> to receive
+inputs, data and configuration and returns processing output. Most data, including input data from the database, but also processing results and intermediate results,
+are saved to a temporary folder on the processing server. The WPS just exchanges configuration and file-locations. For this to work, a set of <em>data types</em> are defined.
+Each tool can only handle one specific data type, or a set of specified data types, and has defined outputs. These data types are hierachical. That means there are tools that
+can handle any type of timeseries data, while other will expect a timeseries of discharge data.</p>
+</section>
+<section id="data-types">
+<h2>Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h2>
+<table class="table" id="id10">
+<caption><span class="caption-text">Overview</span><a class="headerlink" href="#id10" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 35.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>type name</p></th>
+<th class="head"><p>file type</p></th>
+<th class="head"><p>reader function</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>array</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.npy</span></code>, <code class="docutils literal notranslate"><span class="pre">.npz</span></code></p></td>
+<td><p><a class="reference external" href="https://numpy.org/doc/1.18/reference/generated/numpy.load.html">numpy.load</a></p></td>
+<td><p>1D array, without any index information</p></td>
+</tr>
+<tr class="row-odd"><td><p>iarray</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0]).iloc[:,0]</a></p></td>
+<td><p>1D array, indexed by any kind of pandas supported index, except <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>varray</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0]).iloc[:,0]</a></p></td>
+<td><p>1D array, indexed by any kind of pandas supported index, except <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>. The <code class="docutils literal notranslate"><span class="pre">pd.Series.name</span></code> is a valid V-FOR-WaTer variable, e.g. the index may be a depth and the variable name <code class="docutils literal notranslate"><span class="pre">'bulk</span> <span class="pre">density'</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>timeseries</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0]).iloc[:,0]</a></p></td>
+<td><p>1D array, indexed by a <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>vtimeseries</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0]).iloc[:,0]</a></p></td>
+<td><p>1D array, indexed by a <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>. The <code class="docutils literal notranslate"><span class="pre">pd.Series.name</span></code> is a valid V-FOR-WaTer variable, e.g. <code class="docutils literal notranslate"><span class="pre">'discharge'</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2darray</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.npy</span></code>, <code class="docutils literal notranslate"><span class="pre">.npz</span></code></p></td>
+<td><p><a class="reference external" href="https://numpy.org/doc/1.18/reference/generated/numpy.load.html">numpy.load</a></p></td>
+<td><p>2D array, without any index information</p></td>
+</tr>
+<tr class="row-even"><td><p>ndarray</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.npy</span></code>, <code class="docutils literal notranslate"><span class="pre">.npz</span></code></p></td>
+<td><p><a class="reference external" href="https://numpy.org/doc/1.18/reference/generated/numpy.load.html">numpy.load</a></p></td>
+<td><p>N-dimensional array, without any index information</p></td>
+</tr>
+<tr class="row-odd"><td><p>idataframe</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0])</a></p></td>
+<td><p>multiple arrays, indexed by any kind of pandas supported index, except <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>vdataframe</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0])</a></p></td>
+<td><p>multiple arrays, indexed by any kind of pandas supported index, except <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>. All <code class="docutils literal notranslate"><span class="pre">pd.DataFrame.columns</span></code> have to be of same V-ForWater variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p>time-dataframe</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0])</a></p></td>
+<td><p>multiple arrays, indexed by a <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>vtime-dataframe</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">pandas.read_csv(… index_col=[0])</a></p></td>
+<td><p>multiple arrays, indexed by a <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>. All <code class="docutils literal notranslate"><span class="pre">pd.DataFrame.columns</span></code> have to be of same V-ForWater variable</p></td>
+</tr>
+<tr class="row-odd"><td><p>raster</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.gtiff</span></code>, <code class="docutils literal notranslate"><span class="pre">.geotiff</span></code>, <code class="docutils literal notranslate"><span class="pre">.asc</span></code></p></td>
+<td><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.html?highlight=rasterio.open#rasterio.open">rasterio.open()</a></p></td>
+<td><p>Georeferenced raster image. Any file format supported by GDAL is supported by <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> and therefore also here.</p></td>
+</tr>
+<tr class="row-even"><td><p>vraster</p></td>
+<td><p>?</p></td>
+<td><p>I have no idea</p></td>
+<td><p>Variable bound georeferenced raster image. No idea how to do that.</p></td>
+</tr>
+<tr class="row-odd"><td><p>html</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.html</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">open()</span></code></p></td>
+<td><p>generic HTML output. Tools that output text or HTML tables can use this <em>data-type</em></p></td>
+</tr>
+<tr class="row-even"><td><p>plot</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.script.html</span></code>, <code class="docutils literal notranslate"><span class="pre">.div.html</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">open()</span></code></p></td>
+<td><p><a class="reference external" href="https://docs.bokeh.org/en/latest/docs/user_guide/embed.html#components">Bokeh components</a> <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> tag for tools that output a Bokeh figure</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hierachical-order">
+<h2>Hierachical Order<a class="headerlink" href="#hierachical-order" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span>
+  <span class="o">-</span> <span class="n">iarray</span>
+    <span class="o">-</span> <span class="n">varray</span>
+  <span class="o">-</span> <span class="n">timeseries</span>
+    <span class="o">-</span> <span class="n">vtimeseries</span>
+ <span class="n">ndarray</span>
+  <span class="o">-</span> <span class="n">raster</span>
+    <span class="o">-</span> <span class="n">vraster</span>
+  <span class="o">-</span> <span class="mi">2</span><span class="n">darray</span>
+  <span class="o">-</span> <span class="n">idataframe</span>
+    <span class="o">-</span> <span class="n">vdataframe</span>
+  <span class="o">-</span> <span class="n">time</span><span class="o">-</span><span class="n">dataframe</span>
+    <span class="o">-</span> <span class="n">vtime</span><span class="o">-</span><span class="n">dataframe</span>
+ <span class="n">html</span>
+  <span class="o">-</span> <span class="n">plot</span>
+</pre></div>
+</div>
+<p>The hierachy is <em>downward</em> compatible. That means a named variable <code class="docutils literal notranslate"><span class="pre">vtimeseries</span></code> is also a valid <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> and an <code class="docutils literal notranslate"><span class="pre">array</span></code>, but not a <cite>varray</cite>. It is possbile that tools might accept data types from different branches. A tool that accepts <code class="docutils literal notranslate"><span class="pre">array</span></code> <strong>and</strong> <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> will literally take <em>any</em> input.</p>
+</section>
+<section id="defining-data-types">
+<h2>Defining data types<a class="headerlink" href="#defining-data-types" title="Link to this heading">#</a></h2>
+<p>The definition of input and output data is done using a <code class="docutils literal notranslate"><span class="pre">LiteralInput</span></code> and <code class="docutils literal notranslate"><span class="pre">LiteralOutput</span></code> of type <code class="docutils literal notranslate"><span class="pre">string</span></code>.
+The actual data is stored in temporary files as specified in the table above.
+All files of one output/input will use the same file name and only differ in file ending. The file name is a <a class="reference external" href="https://de.wikipedia.org/wiki/Universally_Unique_Identifier#(Pseudo)zuf%C3%A4llig_generierte_UUIDs_(Version_4)">UUID version 4</a>.
+They will always consist of at least two files, one for the data and a metadata file of type <code class="docutils literal notranslate"><span class="pre">.json</span></code></p>
+<section id="wps-input">
+<h3>WPS Input<a class="headerlink" href="#wps-input" title="Link to this heading">#</a></h3>
+<p>If a tool needs any of the file-based data types from above, the WPS process just needs to define an input of type string and awaits the UUID of
+the given data source.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyTool</span><span class="p">(</span><span class="n">Process</span><span class="p">):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="n">LiteralInput</span><span class="p">(</span>
+        <span class="s1">&#39;timeseries&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;UUID of the timeseries to be used&#39;</span><span class="p">,</span>
+        <span class="n">data_type</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="n">min_occurence</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">max_occurence</span><span class="o">=</span><span class="mi">5</span>
+      <span class="p">)</span>
+    <span class="p">]</span>
+</pre></div>
+</div>
+<p>The definition of inputs follows <code class="docutils literal notranslate"><span class="pre">LiteralInput(identifier,</span> <span class="pre">title=None,</span> <span class="pre">data_type=None,</span> <span class="pre">abstract='',</span> <span class="pre">uoms=None,</span> <span class="pre">min_occurs=1,</span> <span class="pre">max_occurs=1,</span> <span class="pre">allowed_values=None,</span> <span class="pre">default=None)</span></code></p>
+<ul class="simple">
+<li><p>identifier - Name of input and definition of more specific datatypes, e.g. <code class="docutils literal notranslate"><span class="pre">input1__timeseries__discharge</span></code>.</p></li>
+<li><p>title - Title of input field exposed to the user.</p></li>
+<li><p>data_type - General data type of input. <strong>Standard input is a textfield</strong>. Adaptations for special cases are in preparation. E.g. <code class="docutils literal notranslate"><span class="pre">string</span></code> exposes a textfield; <code class="docutils literal notranslate"><span class="pre">string</span></code> <strong>in combination with a specific datatype defined in the identifier exposes a dropdown menu</strong>. Allowed are the basic data types <code class="docutils literal notranslate"><span class="pre">'float',</span> <span class="pre">'boolean',</span> <span class="pre">'integer',</span> <span class="pre">'string',</span> <span class="pre">'positiveInteger',</span> <span class="pre">'anyURI',</span> <span class="pre">'time',</span> <span class="pre">'date',</span> <span class="pre">'dateTime',</span> <span class="pre">'scale',</span> <span class="pre">'angle',</span> <span class="pre">'nonNegativeInteger'</span></code>.</p></li>
+<li><p>abstract - Information for the user about the data.</p></li>
+<li><p>uoms - units (not used yet)</p></li>
+<li><p>min_occurs - minimum occurrence of the input. <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+<li><p>max_occurs - maximum occurrence of the input. <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+</ul>
+<table class="table" id="id11">
+<caption><span class="caption-text">Use of min_occurs and max_occurs to define input types in web portal</span><a class="headerlink" href="#id11" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 38.9%" />
+<col style="width: 27.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>min_occurs</p></th>
+<th class="head"><p>max_occurs</p></th>
+<th class="head"><p>implication for wps input</p></th>
+<th class="head"><p>element</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>single value &amp; required <code class="docutils literal notranslate"><span class="pre">default</span></code></p></td>
+<td><p>dropdown</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>single value &amp; <strong>not</strong> required</p></td>
+<td><p>dropdown</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&gt;1</span></code></p></td>
+<td><p>one or more values &amp; <strong>not</strong> required</p></td>
+<td><p>multi select dropdown</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;0</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&gt;1</span></code></p></td>
+<td><p>one or more values &amp; required</p></td>
+<td><p>multi select dropdown</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>allowed_values - defined values exposed to the user as <strong>radio buttons</strong>.</p></li>
+<li><p>default - value used when the user selects nothing for this input.</p></li>
+</ul>
+<p>The definition of the file-based data types is supposed to be done in <code class="docutils literal notranslate"><span class="pre">Keywords</span></code>, when they are implemented in <code class="docutils literal notranslate"><span class="pre">pywps</span></code> and <code class="docutils literal notranslate"><span class="pre">owslib</span></code>.</p>
+<p>The example above results in a dropdown that shows <code class="docutils literal notranslate"><span class="pre">'UUID</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">timeseries</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">used'</span></code> when the user hovers over the element. The user can select two to five timeseries datasets from the dropdown (<code class="docutils literal notranslate"><span class="pre">min_occurence=2</span></code> forces a <code class="docutils literal notranslate"><span class="pre">*required</span></code> flag to the input field, and <code class="docutils literal notranslate"><span class="pre">max_occurence=5</span></code> forces a multiple select option).</p>
+<p>More information how to describe the inputs of a wps in general is given in the <a class="reference external" href="https://pywps.readthedocs.io/en/stable/api.html">pywps documentation</a>.</p>
+</section>
+<section id="wps-output">
+<h3>WPS Output<a class="headerlink" href="#wps-output" title="Link to this heading">#</a></h3>
+<p>The WPS Process output will always be a string named after the output type from the table above containing the UUID <strong>without file type</strong>.
+A single WPS might have more than one output.
+An additional output called <code class="docutils literal notranslate"><span class="pre">'error'</span></code> is appended to each WPS Process. It contains a JSON-serialized string of the form:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">True</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">False</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error message if any&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error type if any&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The error-object will also be returned, if there is no error. Then, the <code class="docutils literal notranslate"><span class="pre">error['error']==False</span></code>. The error type can be one of:</p>
+<ul class="simple">
+<li><p>bug - unexpected exceptions that are not handled in the Toolbox. These should be reported to the developer.</p></li>
+<li><p>userWarning - mainly due to wrong options passed.</p></li>
+<li><p>processError - expected errors that are specific to the tool. These errors need to be reported to the user.</p></li>
+</ul>
+<p>An example of a processError would be a <code class="docutils literal notranslate"><span class="pre">numpy.LinAlgError</span></code> that is raised during Kriging, if the kriging matrix is bad conditioned.
+This is an expected error that should be reported to the user, as it could indicate that the Kriging results are incorrect.
+These kind of errors cannot be handled in the Toolbox.</p>
+</section>
+<section id="metadata-file">
+<h3>Metadata file<a class="headerlink" href="#metadata-file" title="Link to this heading">#</a></h3>
+<p>Each tool will also write a metadata file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format. This metadata file contains
+metadata about the initial datasets that might be required by some tools, and a collection of all tools that were already applied.
+That means, for a specific tool, the corresponding <code class="docutils literal notranslate"><span class="pre">.json</span></code> will conain the UUIDs of other tool runs.
+In this way, a toolchain can be traced. If you re-run a tool, a new <code class="docutils literal notranslate"><span class="pre">.json</span></code> will be written.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">.json</span></code> file will contain all information about the processed tool. This includes metadata like the tool name and the
+given inputs, but also parameters like the processing time. For any input which was the result of another tool, the UUID is
+given anyway and a toolchain can be reconstructed.
+If a tool loaded data into the workspace, either by loading it from the database or by producing mdelling output, the
+necessary metadata will be contained in a special key <code class="docutils literal notranslate"><span class="pre">'meta'</span></code> or <code class="docutils literal notranslate"><span class="pre">'entry_id'</span></code> of the file.
+This way, if a tool needs the geolocation of a dataset, but is the not the first tool in line, it can reconstruct the
+toolchain until any of the other <code class="docutils literal notranslate"><span class="pre">.json</span></code> contains a special key.
+<code class="docutils literal notranslate"><span class="pre">'meta'</span></code> is expected to have the same structure as the metadata in the V-FOR-WaTer database, while <code class="docutils literal notranslate"><span class="pre">'entry_id'</span></code> can
+be used to query the needed information and is thus the preferred way.</p>
+<p>A description of the <code class="docutils literal notranslate"><span class="pre">.json</span></code> is shown below:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier of the WPS process&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title of the WPS process&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Version of the WPS process&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;inputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UUID if the input was a tool output | optional&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;entry_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ID in the database if data was loaded | optional&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;meta&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">me</span><span class="kc">ta</span><span class="err">da</span><span class="kc">ta</span><span class="w"> </span><span class="err">i</span><span class="kc">tself</span><span class="w"> </span><span class="err">i</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">t</span><span class="err">wo</span><span class="w"> </span><span class="err">o</span><span class="kc">t</span><span class="err">hers</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="kc">n</span><span class="err">o</span><span class="kc">t</span><span class="w"> </span><span class="err">applicable</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">t</span><span class="err">her</span><span class="w"> </span><span class="err">Li</span><span class="kc">teral</span><span class="err">I</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span><span class="p">,</span><span class="w"> </span><span class="kc">t</span><span class="err">ha</span><span class="kc">t</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="kc">n</span><span class="err">o</span><span class="kc">t</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="err">pu</span><span class="kc">ts</span>
+<span class="w">  </span><span class="nt">&quot;startUTC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UTC timestamp when process tool was started&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;endUTC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UTC timestamp when process tool ended&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="err">error</span><span class="w"> </span><span class="err">objec</span><span class="kc">t</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">described</span><span class="w"> </span><span class="err">above</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition-todo admonition" id="id9">
+<p class="admonition-title">Todo</p>
+<p>fill the exapmple above</p>
+</div>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>If you run a tool that produces a <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> without error the WPS output will look similar to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OUTPUTS</span><span class="p">[</span><span class="s1">&#39;timeseries&#39;</span><span class="p">]:</span> <span class="s1">&#39;d5e98fdb-f212-42ce-8011-50e64a0a3c16&#39;</span>
+<span class="n">OUTPUTS</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]:</span> <span class="s1">&#39;{&quot;error&quot;: False, &quot;message&quot;: &quot;&quot;, &quot;type&quot;: &quot;&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>On the drive, you will find the following files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d5e98fdb</span><span class="o">-</span><span class="n">f212</span><span class="o">-</span><span class="mi">42</span><span class="n">ce</span><span class="o">-</span><span class="mi">8011</span><span class="o">-</span><span class="mf">50e64</span><span class="n">a0a3c16</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">d5e98fdb</span><span class="o">-</span><span class="n">f212</span><span class="o">-</span><span class="mi">42</span><span class="n">ce</span><span class="o">-</span><span class="mi">8011</span><span class="o">-</span><span class="mf">50e64</span><span class="n">a0a3c16</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>If you run a tool that produces a <code class="docutils literal notranslate"><span class="pre">plot</span></code> and the result <code class="docutils literal notranslate"><span class="pre">vtimeseries</span></code> that is visualized in the plot without error the WPS output will look similar to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OUTPUTS</span><span class="p">[</span><span class="s1">&#39;vtimeseries&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ec97a39e-933c-411f-b4f5-7716871bb64f&#39;</span>
+<span class="n">OUTPUTS</span><span class="p">[</span><span class="s1">&#39;plot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;6b23c7b6-4457-4ff2-82a3-e3c5136abfe0&#39;</span>
+<span class="n">OUTPUTS</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]:</span> <span class="s1">&#39;{&quot;error&quot;: False, &quot;message&quot;: &quot;&quot;, &quot;type&quot;: &quot;&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>On the drive, you will find the following files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ec97a39e</span><span class="o">-</span><span class="mi">933</span><span class="n">c</span><span class="o">-</span><span class="mi">411</span><span class="n">f</span><span class="o">-</span><span class="n">b4f5</span><span class="o">-</span><span class="mi">7716871</span><span class="n">bb64f</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">ec97a39e</span><span class="o">-</span><span class="mi">933</span><span class="n">c</span><span class="o">-</span><span class="mi">411</span><span class="n">f</span><span class="o">-</span><span class="n">b4f5</span><span class="o">-</span><span class="mi">7716871</span><span class="n">bb64f</span><span class="o">.</span><span class="n">json</span>
+<span class="mi">6</span><span class="n">b23c7b6</span><span class="o">-</span><span class="mi">4457</span><span class="o">-</span><span class="mi">4</span><span class="n">ff2</span><span class="o">-</span><span class="mi">82</span><span class="n">a3</span><span class="o">-</span><span class="n">e3c5136abfe0</span><span class="o">.</span><span class="n">script</span><span class="o">.</span><span class="n">html</span>
+<span class="mi">6</span><span class="n">b23c7b6</span><span class="o">-</span><span class="mi">4457</span><span class="o">-</span><span class="mi">4</span><span class="n">ff2</span><span class="o">-</span><span class="mi">82</span><span class="n">a3</span><span class="o">-</span><span class="n">e3c5136abfe0</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">html</span>
+<span class="mi">6</span><span class="n">b23c7b6</span><span class="o">-</span><span class="mi">4457</span><span class="o">-</span><span class="mi">4</span><span class="n">ff2</span><span class="o">-</span><span class="mi">82</span><span class="n">a3</span><span class="o">-</span><span class="n">e3c5136abfe0</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At this point the two <code class="docutils literal notranslate"><span class="pre">.json</span></code> files essentially contain the same information, but as the <code class="docutils literal notranslate"><span class="pre">vtimeseries</span></code> might be further processed.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="standalone.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Standalone Sub-Projects</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="contribute.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contribution Guide</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierachical-order">Hierachical Order</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-data-types">Defining data types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-input">WPS Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-output">WPS Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-file">Metadata file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/developer/wps.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2020, Mälicke, Strobl, Azmi, Hassler, Meyer.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
